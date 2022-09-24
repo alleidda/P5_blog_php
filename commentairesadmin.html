@@ -24,7 +24,6 @@
         <link rel="stylesheet" href="./public/css/main.css" type="text/css">
         <link rel="stylesheet" href="./public/css/header.css" type="text/css">
         <link rel="stylesheet" href="./public/css/home.css" type="text/css">
-        <link rel="stylesheet" href="./public/css/projects.css" type="text/css">
         <link rel="stylesheet" href="./public/css/footer.css" type="text/css">
     </head>
 
@@ -40,19 +39,19 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a href="index.html"class="nav-link">Accueil</a>
+                  <a href="indexadmin.html"class="nav-link">Accueil</a>
                 </li>
                 <li class="nav-item ">
-                  <a href="blogsposts.html" class="nav-link">Blogs Posts</a>
+                  <a href="blogspostsadmin.html" class="nav-link">Blogs Posts</a>
+                </li>
+                <li class="nav-item ">
+                    <a href="commentairesadmin.html" class="nav-link">Commentaires</a>
+                  </li>
+                <li class="nav-item">
+                  <a href="creerunblogpost.html" class="nav-link">Créer un blog post</a>
                 </li>
                 <li class="nav-item">
-                  <a href="signup.html" class="nav-link">S'inscrire</a>
-                </li>
-                <li class="nav-item">
-                  <a href="login.html" class="nav-link">Se connecter</a>
-                </li>
-                <li class="nav-item">
-                  <a href="login.html" class="nav-link">Déconnexion</a>
+                  <a href="loginadmin.html" class="nav-link">Déconnexion</a>
                 </li>
                
               </ul>
@@ -64,103 +63,88 @@
 
         <main class="main-container home-section">
             <section id="home">
-                <div class="landing-page-details">
-                    <h1 class="small-title">Hi,</h1>
-                    <h2 class="big-title">I'm <span class="my-name pink">Addiëlla</span></h2>
-                  
-                    <div class="short-bio">
-                        <p>I am currently learning about programming in order to become a fullstack developer.
-                            Here you will find some projects I did and the technologies they involves.
-                        </p>
-                    </div>
+              <table class="table">
+                <thead>
+                    <tr>
+
+                        <th scope="col">#</th>
+                        <th scope="col">Numéro du Blog post</th>
+                        <th scope="col">Pseudo</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Commentaire</th>
+                        <th scope="col">Date</th>
+                        
+                        <th scope="col" colspan="2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                </td>
+                                <td>Mina</td>
+                                <td>minaod@yahoo.fr</td>
+                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet placeat inventore vel quae, quis minus.</td>
+                                <td>15 septembre à 15:22:12</td>
+                                <td class="align-middle">
+                                <a href="#" class="btn btn-success">Valider </a>
+                            </td>
+                               
+                                <td>
+                                    <form action="" method="post">
+                                        <button class="btn btn-danger" type="submit">Supprimer</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>2</td>
+                        <td>1</td>
+                        </td>
+                        <td>Mina</td>
+                        <td>minaod@yahoo.fr</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet placeat inventore vel quae, quis minus.</td>
+                        <td>15 septembre à 15:22:12</td>
+                        <td class="align-middle">
+                        <a href="#" class="btn btn-success">Valider </a>
+                    </td>
+                       
+                        <td>
+                            <form action="" method="post">
+                                <button class="btn btn-danger" type="submit">Supprimer</button>
+                            </form>
+                        </td>
+                    </tr>
                 
-                </div>
-                <div class="art-me">
-                    <img src="./public/images/me2.gif" alt="Me">
-                </div>
-                <div class="landing-page-socials">
-                    <ul>
-                        <li class="social-link">
-                            <a href="https://www.linkedin.com/in/addi%C3%ABlla-amouzoun-4896ab184/" aria-label="LinkedIn"
-                                target="_blank">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                        <li class="social-link">
-                            <a href="https://github.com/alleidda" aria-label="GitHub"
-                                target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </li>
-                        <li class="social-link">
-                            <a href="/public/Resume_Addiëlla_AMOUZOUN.pdf">
-                                <i class="fas fa-file-pdf"> CV</i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="projects" id="select-projects">
-                <h2 id="mesprojets">Contact</h2>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>3</td>
+                <td>3</td>
+                </td>
+                <td>Mina</td>
+                <td>minaod@yahoo.fr</td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet placeat inventore vel quae, quis minus.</td>
+                <td>15 septembre à 15:22:12</td>
+                <td class="align-middle">
+                <a href="#" class="btn btn-success">Valider </a>
+            </td>
                
+                <td>
+                    <form action="" method="post">
+                        <button class="btn btn-danger" type="submit">Supprimer</button>
+                    </form>
+                </td>
+            </tr>
+        
+</tbody>
                
-                   <!-- Wrapper container -->
-<div class="container py-4">
-
-   
-    <form id="contactForm">
-  
-      <!-- Name input -->
-      <div class="mb-3">
-        <label class="form-label" for="name">Nom</label>
-        <input class="form-control" id="name" type="text" placeholder="Nom" data-sb-validations="required" />
-        <div class="invalid-feedback" data-sb-feedback="name:required">Veuillez saisir votre nom.</div>
-      </div>
-
-      <div class="mb-3">
-        <label class="form-label" for="name">Prenom</label>
-        <input class="form-control" id="name" type="text" placeholder="Prénom" data-sb-validations="required" />
-        <div class="invalid-feedback" data-sb-feedback="prenom:required">Veuillez saisir votre prénom.</div>
-      </div>
-  
-      <!-- Email address input -->
-      <div class="mb-3">
-        <label class="form-label" for="emailAddress">Email</label>
-        <input class="form-control" id="emailAddress" type="email" placeholder="Email" data-sb-validations="required, email" />
-        <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Veuillez entrer votre adresse mail</div>
-        <div class="invalid-feedback" data-sb-feedback="emailAddress:email">L'adresse mail est invalide</div>
-      </div>
-  
-      <!-- Message input -->
-      <div class="mb-3">
-        <label class="form-label" for="message">Message</label>
-        <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
-        <div class="invalid-feedback" data-sb-feedback="message:required">Veuillez saisir votre message.</div>
-      </div>
-  
-      <!-- Form submissions success message -->
-      <div class="d-none" id="submitSuccessMessage">
-        <div class="text-center mb-3">Le messae a été envoyé !</div>
-      </div>
-  
-      <!-- Form submissions error message -->
-      <div class="d-none" id="submitErrorMessage">
-        <div class="text-center text-danger mb-3">Erreur lors de l'envoie du message !</div>
-      </div>
-  
-      <!-- Form submit button -->
-      <div class="d-grid">
-        <button class="btn btn-primary btn-lg" type="submit">Envoyer</button>
-      </div>
-  
-    </form>
-  
-  </div>
-                    
+            </table>
+            
             </section>
-
-         
-        </main>
+            </main>
 
         <footer class="footer-container">
             <div class="footer">

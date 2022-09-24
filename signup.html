@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Se connecter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="./public/css/header.css" type="text/css">
+    <link rel="stylesheet" href="./public/css/main.css" type="text/css">
+    <link rel="stylesheet" href="./public/css/footer.css" type="text/css">
+
+</head>
+
+<body>
+    
+   <!--Nav-->
+   <nav class=" navs navbar navbar-expand-lg navbar-dark">
+      <a href="index.html" class="navbar-brand">@addielladotexe</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a href="index.html"class="nav-link">Accueil</a>
+          </li>
+          <li class="nav-item ">
+            <a href="blogsposts.html" class="nav-link">Blogs Posts</a>
+          </li>
+          <li class="nav-item">
+            <a href="signup.html" class="nav-link">S'inscrire</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">Se connecter</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link">Déconnexion</a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--End of NAv-->
+<!-- Préinscriptions SECTION-->
+
+<section class="contact py-5">
+    <div class="container">
+      <h2 class="section-heading text-center">Inscription</h2>
+      <form  class="col-lg-8 offset-lg-2">
+        <div class="form-group">
+          <label for="name">Votre pseudo</label>
+          <input type="text" id="pseudo" class="form-control" placeholder="Pseudo">
+        </div>
+        <div class="form-group">
+          <label for="name">Votre prénom</label>
+          <input type="text" id="firstName" class="form-control" placeholder="Nom">
+        </div>
+        <div class="form-group">
+          <label for="name">Votre nom</label>
+          <input type="text" id="lastName" class="form-control" placeholder="Prénom">
+        </div>
+        <div class="form-group">
+          <label for="email">Votre email</label>
+          <input type="email" id="email" class="form-control" aria-describedby="emailHelp" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="password">Créer un mot de passe</label>
+          <input type="password" id="password" class="form-control" aria-describedby="passwordHelp" placeholder="mot de passe">
+        </div>
+        
+        <div class="form-group form-check py-3">
+          <input type="checkbox" class="form-check-input" id="check">
+          <label for="check" class="form-check-label">
+            En soumettant ce formulaire, j'accepte que les Informations saisies soient exploitées par le site "addielladotexe".
+          </label>
+        </div>
+        <div class="text-center mt-4">
+          <button class="btn btn-lg btn-color bg-light">
+            Envoyer
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <!-- end of Préinscriptions SECTION -->
+
+<footer class="footer-container">
+    <div class="footer">
+        <div class="footer-column">
+            <a href="/" class="footer-logo">@addielladotexe</a>
+            <div class="socials">
+                <ul>
+                    <li class="social-link">
+                        <a href="https://www.linkedin.com/in/addi%C3%ABlla-amouzoun-4896ab184/"
+                            aria-label="LinkedIn" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li class="social-link">
+                        <a href="https://github.com/alleidda" aria-label="GitHub"
+                            target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <span class="copyright"><i class="fas fa-copyright"></i> Addiella Amouzoun 2022</span>
+        </div>
+        <div class="footer-column">
+            <a href="#" class="footer-button">
+                <img src="./public/images/smile.svg" alt="Smile Icon">
+                Administrateur
+            </a>
+            
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+crossorigin="anonymous"></script>
+</body>
+
+</html>
