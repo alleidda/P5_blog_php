@@ -1,4 +1,4 @@
-# P5_blog_php
+﻿# P5_blog_php
 
 Projet 5 de la formation developpeur d'applications php/Symfonie de Openclassroom.
 Créer une application MVC en php.
@@ -18,3 +18,6 @@ __Etape 4__ : Paramétrez le fichier de gestion de la base de donnée "config/co
     
     
 Vous pouvez maintenant utiliser le blog !
+
+
+

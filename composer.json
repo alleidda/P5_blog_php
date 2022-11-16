@@ -1,0 +1,15 @@
+{
+    "license": "proprietary",
+    "description": "OpenClassRooms website P5",
+    "type": "project",
+    "require": {
+        "php": ">=7.4.3",
+        "swiftmailer/swiftmailer": "v6.1.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Addiella\\controller\\": "controller/",
+            "Addiella\\model\\": "model/"
+        }
+    }
+}
