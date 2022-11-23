@@ -39,7 +39,7 @@ ob_start();
                     <label>Laisser votre message :</label>
                     <textarea class="form-control" name="message" id="message" rows="4" cols="40" required ></textarea> </br>
                     <div class="g-recaptcha"
-                         data-sitekey="6LeF904UAAAAABO6m7Sl-pxLDJMS-2E6v1qzSdUP"></div>
+                         data-sitekey="6Le8uSkjAAAAAPNVJg1CDyZ-1FG_tS2VR4CO5MOO"></div>
 
                     <button type="submit" class="btn btn-primary">Valider</button>
                 </div>

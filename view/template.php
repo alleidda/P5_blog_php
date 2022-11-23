@@ -137,7 +137,7 @@
                     <a class="btn btn-primary" href="cv" target="_blank"><i class="fa fa-file-pdf-o fa-2x"></i>CV</a>
                 </div> </br>
 
-                <p class="m-0 text-center text-white">Copyright &copy; Tondo Design 2022</p>
+                <p class="m-0 text-center text-white">Copyright @addielladotexe 2022</p>
 
             </div>
           <!-- /.container -->

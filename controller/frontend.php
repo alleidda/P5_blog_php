@@ -13,6 +13,10 @@ use \Addiella\model\Comment;
 use \Addiella\model\Post;
 use \Addiella\model\User;
 use \Addiella\model\Session;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 
 
 class Frontend
@@ -318,10 +322,52 @@ class Frontend
                         'lastname' => nl2br(htmlspecialchars($_POST['lastname']))];
             $user = new User($formData);
             $this->usermanager->add($user);
-            include_once 'model/transport.php';
+            // include_once 'model/transport.php';
             // Create the Mailer using your created Transport
-            $mailer = new \Swift_Mailer($transport);
-            // Create a message
+            $mail = new PHPMailer(true);
+            try {
+                //Server settings
+                $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                $mail->isSMTP();                                            //Send using SMTP
+                $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+                $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+                $mail->Username   = 'contactinfo154@gmail.com
+            ';                     //SMTP username
+                $mail->Password   = 'pdcpcpdcxpfnedfy';                               //SMTP password
+                $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
+                $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                // il.creamindte
+                //Recipients
+                $mail->setFrom('contactinfo154@gmail.com
+            ', 'Mailer');
+                $mail->addAddress('cerowab675@kuvasin.com', 'Joe User');     //Add a recipient
+                $mail->addAddress('contactinfo154@gmail.com
+            ');               //Name is optional
+            /*     $mail->addReplyTo('info@example.com', 'Information');
+                $mail->addCC('cc@example.com');
+                $mail->addBCC('bcc@example.com'); */
+            
+            /*     //Attachments
+                $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+                $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name */
+            
+                //Content
+                $mail->isHTML(true);                                  //Set email format to HTML
+                $mail->Subject = 'Here is the subject';
+
+
+                // $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+                $mail->Body = 'Cliquez sur le lien pour <a href=\''.nl2br(htmlspecialchars($data['address']))
+                .'?action=awakeUser&email='. nl2br(htmlspecialchars($_POST['email']))
+                .'\'>valider votre compte.</a>' .'text/html';
+            
+                $mail->send();
+                echo 'Message has been sent';
+                
+            } catch (Exception $e) {
+                echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+            }
+            /* // Create a message
             $message = (new \Swift_Message())
                 ->setSubject('Blog, validez votre compte')
                 ->setFrom([nl2br(htmlspecialchars($data['email'])) => nl2br(htmlspecialchars($data['name']))])
@@ -336,7 +382,7 @@ class Frontend
                                         .nl2br(htmlspecialchars($email)) . ' pour valider votre compte ! Si vous ne voyez
                                         pas l\'email, regardez dans vos courriers indésirables.');
             header('location: connexion');
-            return;
+            return; */
         }
         $this->session->set('show_message', true);
         $this->session->set('message', 'Vous n\'êtes pas humain !');

@@ -1,7 +1,7 @@
 <?php
 return [
     'host'    => 'localhost',
-    'dbname'  => 'blog_p5',
-    'username'=> 'root',
-    'password'=> ''
+    'dbname'  => 'othf1415_blog_p5',
+    'username'=> 'othf1415_othf1415',
+    'password'=> '6xgLYaYMturj'
 ];
