@@ -52,15 +52,6 @@ ob_start();
 
             <?php
 
-            if (!empty($_SESSION['user'])) {
-                if (strpos($_SESSION['user'] -> permAction(), 'getPendingUsersView') !== false) {
-                    ?>
-                    <p>
-                        <a class="btn btn-primary" href='comptes-a-valider'>Comptes en attente de validation</a>
-                    </p>
-                    <?php
-                }
-            }
 
             if (!empty($_SESSION['user'])) {
                 if (strpos($_SESSION['user'] -> permAction(), 'getPendingComments') !== false) {

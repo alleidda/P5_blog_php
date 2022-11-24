@@ -316,7 +316,7 @@ class Frontend
                 header('location: ' . $_SERVER["HTTP_REFERER"]);
                 return;
             }
-            if ($this->usermanager->exists($email)) {
+            if ($this->usermanager->exists($_POST['email'])) {
                 $this->session->set('show_message', true);
                 $this->session->set('message', 'L\'adresse ' . nl2br(htmlspecialchars($_POST['email'])) .
                     ' a deja été enregistrée !');

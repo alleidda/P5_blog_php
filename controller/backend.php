@@ -331,7 +331,6 @@ class Backend
 
     public function validateComment($idComment)
     {
-
         $action = __FUNCTION__;
         $this->allow($action);
 
@@ -350,6 +349,7 @@ class Backend
     {
 
         $this->usermanager->awake($email);
+        $this->usermanager->validate($email);
         $this->session->set('show_message', true);
         $this->session->set('message', 'Votre inscription a bien été prise en compte.
                                 Un administrateur doit maintenant la valider.');

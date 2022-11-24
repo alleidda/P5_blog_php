@@ -211,7 +211,7 @@ class UserManagerPDO extends UserManager
     * @return bool
     */
 
-    public function validate($idUser)
+    public function validate($email)
     {
 
         // Prépare une requête de type UPDATE.
@@ -219,11 +219,11 @@ class UserManagerPDO extends UserManager
                                   SET
                                   valid = :valid
                                   WHERE
-                                  idUser = :idUser');
+                                  email = :email');
 
         // Assignation des valeurs à la requête.
         $req->bindValue(':valid', 'Yes', \PDO::PARAM_STR);
-        $req->bindValue(':idUser', $idUser, \PDO::PARAM_INT);
+        $req->bindValue(':email', $email, \PDO::PARAM_INT);
 
 
         // Exécution de la requête.
@@ -336,7 +336,6 @@ class UserManagerPDO extends UserManager
         // Exécution d'une requête COUNT() avec une clause WHERE, et retourne un boolean.
         $req = $this->database->prepare('SELECT COUNT(*) FROM user WHERE email = :email');
         $req->execute([':email' => $info]);
-
         return (bool) $req->fetchColumn();
     }
 }
