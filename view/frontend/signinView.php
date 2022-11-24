@@ -29,8 +29,8 @@ ob_start();
                     -->
 
                     <div class="g-recaptcha"
-                         data-sitekey="6LeF904UAAAAABO6m7Sl-pxLDJMS-2E6v1qzSdUP"></div>
-                    <button type="submit" class="btn btn-primary">Valider</button>
+                         data-sitekey="6Le8uSkjAAAAAPNVJg1CDyZ-1FG_tS2VR4CO5MOO"></div>
+                    <!-- <button type="submit" class="btn btn-primary">Valider</button> -->
                 </div>
             </form>
             <p> <a href='mot-de-passe-oublie'>Mot de passe oublié</a> </p>
