@@ -15,7 +15,7 @@ __Etape 4__ : Paramétrez le fichier de gestion de la base de donnée "config/co
     * 'dbname'  => 'nom_base_de_donnees'  
     * 'username'=> 'nom_utilisateur'  
     * 'password'=> 'mot_de_passe'  
-    
+ __Etape 5__ : Lancez la commande "composer install" pour installer toutes les dépendances
     
 Vous pouvez maintenant utiliser le blog !
 
