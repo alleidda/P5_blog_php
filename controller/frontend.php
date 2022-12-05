@@ -84,6 +84,7 @@ class Frontend
             $secure_mail = str_replace(array("\n", "\r", PHP_EOL), '', $_POST['email']);
 
             $mail = new PHPMailer(true);
+            if (!empty($_POST['firstname'] && $_POST['lastname'])) {
             $user_name = nl2br(htmlspecialchars($_POST['firstname'])) . ' ' . nl2br(htmlspecialchars($_POST['lastname']));
             $mail->isSMTP();
             $mail->Host       = SMTP_HOST;
@@ -105,6 +106,7 @@ class Frontend
             header('location: ' . $_SERVER["HTTP_REFERER"]);
             return;
         }
+    }
         $this->session->set('show_message', true);
         $this->session->set('message', 'Vous n\'êtes pas humain !');
         header('location: ' . $_SERVER["HTTP_REFERER"]);
@@ -165,6 +167,7 @@ class Frontend
     public function resetPassword()
     {
         // On check que le mdp fasse au moins 8 caracteres
+        if (!empty($_POST['password'] && $_POST['email'])) {
         if (!preg_match("#.{8,60}#", $_POST['password'])) {
             $this->session->set('show_message', true);
             $this->session->set('message', 'Votre mot de passe doit comporter au moins 8 caracteres !');
@@ -188,6 +191,7 @@ class Frontend
         $this->session->set('show_message', true);
         $this->session->set('message', 'Votre nouveau mot de passe a bien été enregistré !');
         header('location: connexion');
+    }
     }
     /**
      * Methode qui permet d'envoyer le mail de reinitialiser du mot de passe.
