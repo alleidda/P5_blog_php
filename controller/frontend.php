@@ -103,7 +103,8 @@ class Frontend
             $mail->send();
             $this->session->set('show_message', true);
             $this->session->set('message', 'Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais.');
-            header('location: ' . $_SERVER["HTTP_REFERER"]);
+            $server = $_SERVER["HTTP_REFERER"];
+            header('location: ' . $server);
             return;
         }
     }

@@ -74,7 +74,7 @@ class Backend
 
         if ($myfile['my_file']['size'] > 100) {
             if ($myfile['my_file']['error'] > 0) {
-                echo "Erreur lors du transfert";
+                // echo "Erreur lors du transfert";
                 return;
             }
             $maxsize = 1048576;
@@ -150,9 +150,9 @@ class Backend
         } else {
             $valid = 'Yes';
         }
-
+        $content = $_POST['content'];
         $formData = ['idPost' => $idPost,
-                    'content' => nl2br(htmlspecialchars($_POST['content'])),
+                    'content' => nl2br(htmlspecialchars($content)),
                     'valid' => $valid,
                     'idUser' => nl2br(htmlspecialchars($this->session->get('user') -> idUser()))];
 
@@ -292,36 +292,36 @@ class Backend
     * @return void
     */
 
-    public function validateUser($idUser)
-    {
+    // public function validateUser($idUser)
+    // {
 
-        $action = __FUNCTION__;
-        $this->allow($action);
+    //     $action = __FUNCTION__;
+    //     $this->allow($action);
 
-        $this->usermanager->validate($idUser);
-        $user = $this->usermanager->get($idUser);
+    //     $this->usermanager->validate($idUser);
+    //     $user = $this->usermanager->get($idUser);
 
-        include_once 'vendor/autoload.php';
-        include_once 'model/transport.php';
+    //     include_once 'vendor/autoload.php';
+    //     include_once 'model/transport.php';
 
-        // Create the Mailer using your created Transport
-        $mailer = new \Swift_Mailer($transport);
+    //     // Create the Mailer using your created Transport
+    //     $mailer = new \Swift_Mailer($transport);
 
-        // Create a message
-        $message = (new \Swift_Message())
+    //     // Create a message
+    //     $message = (new \Swift_Message())
 
-            ->setSubject('Blog, votre compte a été validé !')
-            ->setFrom([nl2br(htmlspecialchars($data['email'])) => nl2br(htmlspecialchars($data['name']))])
-            ->setTo([nl2br(htmlspecialchars($user->email())), nl2br(htmlspecialchars($user->email()))])
-            ->setBody('Votre compte vient d\'etre validé ! Clickez sur le lien pour
-                      <a href=\''.nl2br(htmlspecialchars($data['address'])).'connexion\'>vous connecter.</a>', 'text/html');
+    //         ->setSubject('Blog, votre compte a été validé !')
+    //         ->setFrom([nl2br(htmlspecialchars($data['email'])) => nl2br(htmlspecialchars($data['name']))])
+    //         ->setTo([nl2br(htmlspecialchars($user->email())), nl2br(htmlspecialchars($user->email()))])
+    //         ->setBody('Votre compte vient d\'etre validé ! Clickez sur le lien pour
+    //                   <a href=\''.nl2br(htmlspecialchars($data['address'])).'connexion\'>vous connecter.</a>', 'text/html');
 
-        // Send the message
-        $mailer->send($message);
-        $this->session->set('show_message', true);
-        $this->session->set('message', 'Compte validé ! Email envoyé à l\'utilisateur.');
-        header('location: '. $_SERVER["HTTP_REFERER"]);
-    }
+    //     // Send the message
+    //     $mailer->send($message);
+    //     $this->session->set('show_message', true);
+    //     $this->session->set('message', 'Compte validé ! Email envoyé à l\'utilisateur.');
+    //     header('location: '. $_SERVER["HTTP_REFERER"]);
+    // }
 
     /**
     * Methode qui permet de valider un commentaire.
