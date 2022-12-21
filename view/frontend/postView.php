@@ -30,7 +30,7 @@ if ($creationDate !== $updateDate) {
 
 <?php
 
-if (isset($_SESSION['user'])) {
+if (isset($_SESSION['user']) && $_SESSION['user'] !== null) {
     if (strpos($_SESSION['user'] -> permAction(), 'editPost') !== false) {
         ?>
 
