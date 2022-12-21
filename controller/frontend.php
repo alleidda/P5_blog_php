@@ -85,7 +85,9 @@ class Frontend
 
             $mail = new PHPMailer(true);
             if (!empty($_POST['firstname'] && $_POST['lastname'])) {
-            $user_name = nl2br(htmlspecialchars($_POST['firstname'])) . ' ' . nl2br(htmlspecialchars($_POST['lastname']));
+                $firstname = $_POST['firstname'];
+                $lastname = $_POST['lastname'];
+            $user_name = nl2br(htmlspecialchars($firstname)) . ' ' . nl2br(htmlspecialchars($lastname));
             $mail->isSMTP();
             $mail->Host       = SMTP_HOST;
             $mail->SMTPAuth   = true;
@@ -147,10 +149,10 @@ class Frontend
      * @param void
      * @return void
      */
-    public function forgotPasswordView()
-    {
-        include 'view/frontend/forgotpasswordView.php';
-    }
+    // public function forgotPasswordView()
+    // {
+    //     include 'view/frontend/forgotpasswordView.php';
+    // }
     /**
      * Methode qui permet d'afficher la page de reinitialisation du mot de passe.
      * @param void

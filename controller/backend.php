@@ -86,7 +86,7 @@ class Backend
                 return;
             }
             if ($myfile['my_file']['size'] > $maxsize) {
-                echo "Le fichier est trop gros";
+                // echo "Le fichier est trop gros";
                 return;
             }
             $file_name1 = time();
