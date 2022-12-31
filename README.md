@@ -1,4 +1,5 @@
 ﻿# P5_blog_php
+ [![Codacy Badge](https://app.codacy.com/project/badge/Grade/5517b5d6a3bb4578b441ce9ce781a130)](https://www.codacy.com/gh/alleidda/P5_blog_php/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=alleidda/P5_blog_php&amp;utm_campaign=Badge_Grade)
 
 Projet 5 de la formation developpeur d'applications php/Symfonie de Openclassroom.
 Créer une application MVC en php.
